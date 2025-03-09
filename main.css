@@ -1,0 +1,254 @@
+.container{
+    width: 100vw;
+    height : 100vh;
+    /* max-width: 1920px;
+    max-height: 1080px;
+    position: relative; */
+
+}
+
+.horizon-context {
+    width: 100vw;
+    height: 50vh;
+    background-color: rgb(80, 135, 197);
+    position: relative;
+    overflow: hidden;
+}
+.road-context{
+    width: 100vw;
+    height: 40vh;
+    background-color:#2c3e50;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    border: 5px dashed white;
+    position: absolute;
+    z-index: 1;
+}
+.bottom-context{
+    width: 100vw;
+    height: 9vh;
+    background-color: #2ecc71;
+    position: relative;
+    /* overflow: hidden; */
+}
+/* mount */
+.m-1{
+    position: absolute;
+    height: 300px;
+    bottom: 0;
+    z-index: 1;
+}
+.m-2{
+    position: absolute;
+    height: 300px;
+    left: 500px;
+    
+}
+.m-3{
+    position: absolute;
+    height: 300px;
+    right:-20px;
+    z-index: 1;
+}
+/* mount */
+/* sun */
+.sun{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    right: 350px;
+    top: 30px;
+    /* top: 400px; */
+}
+.moon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 600px;
+    top: 30px;
+}
+.cloud-1{
+    width: 250px;
+    right: -250px;
+    position: absolute;
+    animation-name: cloudMove;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+.cloud-2{
+    width: 250px;
+    right: -250px;
+    position: absolute;
+    top: 50px;
+    animation: cloudMove 25s linear infinite;
+}
+.cloud-3{
+    width: 250px;
+    right: -250px;
+    position: absolute;
+    top: 100px;
+    animation: cloudMove 35s linear infinite;
+}
+.bird-set{
+    position: relative;
+    top: 20px;
+    height: 200px;
+    width: 200px;
+    animation: birdMove  10s linear infinite;
+}
+.b-1{
+    width: 70px;
+    position: absolute;
+}
+.b-2{
+    width: 70px;
+    position: absolute;
+    bottom: 0;
+    
+}
+.b-3{
+    width: 70px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    z-index: 1;
+}
+.vehicle-1{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    top: -105px;
+    z-index: 2;
+    animation: birdMove  10s linear infinite; 
+}
+.vehicle-2{
+    position: relative;
+    width: 300px;
+    height: 250px;
+    top: -130px;
+    z-index: 2;
+    animation: birdMove  10s linear infinite; 
+    
+}
+.car-box-1{
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+   
+}
+.car-box-2{
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    
+   
+}
+.wheel-11{
+    width: 55px;
+    position: absolute;
+    bottom: 30px;
+    left: 25px;
+    animation: rotate 1s linear infinite;
+
+}
+.wheel-12{
+    width: 55px;
+    position: absolute;
+    bottom: 30px;
+    right: 155px;
+    animation: rotate 1s linear infinite;
+    
+}
+.wheel-21{
+    width: 45px;
+    position: absolute;
+    bottom: 5px;
+    left: 22px;
+    animation: rotate 1s linear infinite;
+
+}
+.wheel-22{
+    width: 45px;
+    position: absolute;
+    bottom: 5px;
+    right: 87px;
+    animation: rotate 1s linear infinite;
+    
+}
+/* boy running */
+
+.boy{
+    width: 10px;
+    height: 10px;
+    bottom: 230px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    animation: boyMove  10s linear infinite;
+}
+/* dog move */
+
+.dog{
+    width: 250px;
+    right: -250px;
+    position: absolute;
+    bottom: -50px;
+    animation: dogMove 15s linear infinite;
+  
+   
+}
+
+/* dog move */
+@keyframes dogMove{
+    from{
+        right: -1250px;
+    }
+    to{
+        right: 2650px;
+    }
+}
+/* boy move */
+@keyframes boyMove{
+    from{
+        left:  -350px;
+    }
+    to{
+        left: 1000px;
+    }
+}
+
+/* wheel rotate */
+@keyframes rotate{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* bird move   */
+@keyframes birdMove{
+    from{
+        left: -350px;
+    }
+    to{
+        left: 2000px;
+    }
+}
+
+@keyframes cloudMove{
+    from{
+        right: -250px;
+    }
+    to{
+        right: 1650px;
+    }
+}
